@@ -89,8 +89,8 @@ public class Animal {
 		contagem++;
 	}
 
-	public void ExibeContagem() {
-		System.out.println("Atualmente temos: " + contagem + " Animais presentes no Banco.");
+	public static int ExibeContagem() {
+		return contagem;
 
 	}
 }
