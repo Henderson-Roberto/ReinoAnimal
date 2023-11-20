@@ -1,32 +1,25 @@
 package ReinoAnimal;
 
-public class Aquatico {
+public class Aquatico extends Animal {
 
-	boolean escamoso;
+	private boolean escamoso;
 	private String aquatico;
 
 	/**
 	 * @author Henderson Roberto
 	 * @param especie
 	 * @param sexo
-	 * @param i
 	 * @param tipoAgua
 	 * @param escamoso
+	 * @param dataNascimento
 	 */
-	public Aquatico(String especie, String sexo, int i, String tipoAgua, boolean escamoso) {
-		super();
-		this.aquatico = aquatico;
+	public Aquatico(String especie, String sexo, String dataNascimento, String tipoAgua, boolean escamoso) {
+		super(especie, sexo, dataNascimento);
+		this.aquatico = tipoAgua;
 		this.escamoso = escamoso;
 	}
 
-	public void nadar() {
-
-		/**
-		 * Define que o animal está nadando.
-		 */
-		System.out.println("O animal está nadando...");
-
-	}
+	
 
 	public boolean isEscamoso() {
 		return escamoso;
@@ -44,21 +37,28 @@ public class Aquatico {
 		this.aquatico = aquatico;
 	}
 
+	
+
+	public void perfil() {
+		super.perfil();
+		System.out.println("Escamoso: " + escamoso);
+		System.out.println("Tipo de água: " + aquatico);
+	}
+	
+	public void nadar() {
+
+		/**
+		 * Define que o animal está nadando.
+		 */
+		System.out.println("O animal está nadando...");
+
+	}
+	
 	/**
 	 * Define que o animal está comendo.
 	 */
 	public void comer() {
 
-		System.out.println("O animal aquatico está comendo...");
-	}
-
-	public void perfil() {
-
-		/**
-		 * Perfil animal.
-		 * 
-		 **/
-		System.out.println("Tipo de água: " + aquatico + "Escamoso: " + escamoso);
-
+		
 	}
 }

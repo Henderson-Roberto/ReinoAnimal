@@ -1,6 +1,6 @@
 package ReinoAnimal;
 
-public class Aereo {
+public class Aereo extends Animal {
 	
 	double altitude;
 	
@@ -8,11 +8,11 @@ public class Aereo {
 	 * @author Henderson Roberto
 	 * @param especie
 	 * @param sexo
-	 * @param i
+	 * @param dataNascimento
 	 * @param altitude
 	 */
-	public Aereo(String especie, String sexo, int i, double altitude) {
-		super();
+	public Aereo(String especie, String sexo, String dataNascimento, double altitude) {
+		super(especie, sexo, dataNascimento);
 		this.altitude = altitude;
 	}
 	
@@ -44,12 +44,8 @@ public class Aereo {
 	}
 	
 	public void perfil() {
-
-		/**
-		 * Imprime no console os dados do animal
-		 **/
-
-		System.out.println("Altitude de vôo: " + altitude);
+		super.perfil();
+		System.out.println("Altitude: " + altitude);
 	}
 
 }

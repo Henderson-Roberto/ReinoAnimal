@@ -8,9 +8,9 @@ package ReinoAnimal;
 
 public class Animal {
 
-	public String especie;
-	public String sexo;
-	public String dataNascimento;
+	private String especie;
+	private String sexo;
+	private String dataNascimento;
 
 	static int contagem = 0;;
 
@@ -19,15 +19,30 @@ public class Animal {
 	 * 
 	 * @param especie
 	 * @param sexo
-	 * @param dataNascimento
+	 * @param dataNascimento2
 	 */
 
-	public Animal(String especie, String sexo, String dataNascimento) {
+	public Animal(String especie, String sexo, String dataNascimento2) {
 		super();
 		this.especie = especie;
 		this.sexo = sexo;
-		this.dataNascimento = dataNascimento;
+		this.dataNascimento = dataNascimento2;
 		contar();
+	}
+	
+	/**
+	 * Perfil de analise do animal.
+	 */
+
+	public void perfil() {
+		System.out.println("Especie: " + especie);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Idade: " + dataNascimento);
+		
+	}
+	
+	public void contando() {
+		System.out.println("Quantidade: " + contagem);
 	}
 
 	/**
@@ -37,17 +52,6 @@ public class Animal {
 	public void comer() {
 		System.out.println("O animal está sendo alimentado...");
 
-	}
-
-	/**
-	 * Perfil de analise do animal.
-	 */
-
-	public void perfil() {
-		System.out.println("Especie: " + especie);
-		System.out.println("Sexo: " + sexo);
-		System.out.println("Nascimento: " + dataNascimento);
-		System.out.println("Quantidade: " + contagem);
 	}
 
 	public String getEspecie() {
